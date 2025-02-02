@@ -1,0 +1,225 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Fonte e configurações base */
+  body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  /* Container geral */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  /* Header */
+  /* Para diminuir o espaçamento lateral no header, ajustamos a largura do container dentro do header */
+  .header .container {
+    width: 100%;
+  }
+  
+  .header {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo-img {
+    width: 40px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-list li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-list li a:hover {
+    color: #9f392d;
+  }
+  
+  /* Seção Hero */
+  .hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+  }
+  
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26,26,26,0.5);
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Botão */
+  .btn {
+    background: #9f392d;
+    color: #fff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background: #ce826f;
+  }
+  
+  /* Seções */
+  .section {
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  /* Sobre */
+  .sobre p {
+    margin-bottom: 10px; /* ajuste conforme necessário */
+  }
+  
+  .sobre-texto {
+    margin-top: 5px; /* ajuste conforme necessário */
+  }
+  
+  /* Ajuste de espaçamento entre seções específicas */
+  #sobre {
+    padding-bottom: 40px; /* diminui o espaço inferior da seção Sobre */
+  }
+  
+  #calculadora {
+    padding-top: 40px;    /* diminui o espaço superior da seção Calculadora */
+    padding-bottom: 40px; /* diminui o espaço inferior da seção Calculadora */
+  }
+  
+  #contato {
+    padding-top: 40px;    /* diminui o espaço superior da seção Contato */
+  }
+  
+  /* Calculadora */
+  .calculadora-form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Resultado */
+  .resultado {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  
+  /* Contato */
+  .contato a {
+    color: #9f392d;
+    text-decoration: none;
+  }
+  
+  .contato a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Rodapé */
+  .footer {
+    background: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+    }
+    
+    .nav-list {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    
+    .hero h2 {
+      font-size: 2rem;
+    }
+    
+    .hero p {
+      font-size: 1rem;
+    }
+  }
+  
