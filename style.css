@@ -225,19 +225,26 @@
       display: block;
     }
     
-    /* Esconde o menu inicialmente e o posiciona */
+    /* Estilo para o menu mobile com animação */
     .nav {
-      display: none;
+      /* Removendo display:none e usando max-height para animar */
+      max-height: 0;
+      overflow: hidden;
       position: absolute;
       top: 70px; /* Ajuste conforme a altura do header */
       right: 0;
       background: #1a1a1a;
       width: 100%;
+      padding: 0 20px;  /* Espaçamento lateral para que os itens não fiquem colados na borda */
+      border-radius: 5px;  /* Bordas levemente arredondadas */
+      transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+      opacity: 0;
       z-index: 10;
     }
     
     .nav.active {
-      display: block;
+      max-height: 300px; /* Valor suficiente para conter o menu – ajuste se necessário */
+      opacity: 1;
     }
     
     .nav-list {
