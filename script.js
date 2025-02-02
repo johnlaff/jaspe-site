@@ -1,49 +1,57 @@
-// Funções da calculadora (convertidas do código Java para JavaScript)
-function calcularInclinacao(altura, comprimento) {
-    return (altura * 100) / comprimento;
-  }
-  
-  function calcularComprimento(altura, inclinacao) {
-    return (altura * 100) / inclinacao;
-  }
-  
-  function calcularAltura(comprimento, inclinacao) {
-    return (comprimento * inclinacao) / 100;
-  }
-  
-  // Renderiza os inputs de acordo com o tipo de cálculo selecionado
-  function renderInputs() {
-    const tipo = document.getElementById('calculoTipo').value;
-    const inputsDiv = document.getElementById('inputs');
-    let html = '';
+document.addEventListener('DOMContentLoaded', () => {
+    // Menu Hamburguer: alterna a exibição do menu em mobile
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
     
-    if (tipo === 'inclinacao') {
-      html = `
-        <label for="altura">Altura (m):</label>
-        <input type="number" id="altura" required step="any">
-        <label for="comprimento">Comprimento (m):</label>
-        <input type="number" id="comprimento" required step="any">
-      `;
-    } else if (tipo === 'comprimento') {
-      html = `
-        <label for="altura">Altura (m):</label>
-        <input type="number" id="altura" required step="any">
-        <label for="inclinacao">Inclinação (%):</label>
-        <input type="number" id="inclinacao" required step="any">
-      `;
-    } else if (tipo === 'altura') {
-      html = `
-        <label for="comprimento">Comprimento (m):</label>
-        <input type="number" id="comprimento" required step="any">
-        <label for="inclinacao">Inclinação (%):</label>
-        <input type="number" id="inclinacao" required step="any">
-      `;
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+    
+    // Funções da calculadora (convertidas do código Java para JavaScript)
+    function calcularInclinacao(altura, comprimento) {
+      return (altura * 100) / comprimento;
     }
     
-    inputsDiv.innerHTML = html;
-  }
-  
-  document.addEventListener('DOMContentLoaded', () => {
+    function calcularComprimento(altura, inclinacao) {
+      return (altura * 100) / inclinacao;
+    }
+    
+    function calcularAltura(comprimento, inclinacao) {
+      return (comprimento * inclinacao) / 100;
+    }
+    
+    // Renderiza os inputs de acordo com o tipo de cálculo selecionado
+    function renderInputs() {
+      const tipo = document.getElementById('calculoTipo').value;
+      const inputsDiv = document.getElementById('inputs');
+      let html = '';
+      
+      if (tipo === 'inclinacao') {
+        html = `
+          <label for="altura">Altura (m):</label>
+          <input type="number" id="altura" required step="any">
+          <label for="comprimento">Comprimento (m):</label>
+          <input type="number" id="comprimento" required step="any">
+        `;
+      } else if (tipo === 'comprimento') {
+        html = `
+          <label for="altura">Altura (m):</label>
+          <input type="number" id="altura" required step="any">
+          <label for="inclinacao">Inclinação (%):</label>
+          <input type="number" id="inclinacao" required step="any">
+        `;
+      } else if (tipo === 'altura') {
+        html = `
+          <label for="comprimento">Comprimento (m):</label>
+          <input type="number" id="comprimento" required step="any">
+          <label for="inclinacao">Inclinação (%):</label>
+          <input type="number" id="inclinacao" required step="any">
+        `;
+      }
+      
+      inputsDiv.innerHTML = html;
+    }
+    
     // Inicializa os inputs com a seleção padrão
     renderInputs();
     
@@ -61,7 +69,7 @@ function calcularInclinacao(altura, comprimento) {
         const altura = parseFloat(document.getElementById('altura').value);
         const comprimento = parseFloat(document.getElementById('comprimento').value);
         resultado = calcularInclinacao(altura, comprimento);
-        // Resultado em porcentagem
+        // Exibe o resultado em porcentagem
         document.getElementById('resultado').innerHTML = `<p>Resultado: ${resultado.toFixed(2)}%</p>`;
       } else if (tipo === 'comprimento') {
         const altura = parseFloat(document.getElementById('altura').value);

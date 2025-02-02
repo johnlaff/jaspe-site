@@ -22,7 +22,6 @@
   }
   
   /* Header */
-  /* Para diminuir o espaçamento lateral no header, ajustamos a largura do container dentro do header */
   .header .container {
     width: 100%;
   }
@@ -37,6 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
   }
   
   .logo-container {
@@ -46,7 +46,7 @@
   }
   
   .logo-img {
-    width: 40px; /* Ajuste o tamanho conforme necessário */
+    width: 40px;
     height: auto;
   }
   
@@ -69,6 +69,16 @@
   
   .nav-list li a:hover {
     color: #9f392d;
+  }
+  
+  /* Botão do menu hamburguer */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
   }
   
   /* Seção Hero */
@@ -130,25 +140,25 @@
   
   /* Sobre */
   .sobre p {
-    margin-bottom: 10px; /* ajuste conforme necessário */
+    margin-bottom: 10px;
   }
   
   .sobre-texto {
-    margin-top: 5px; /* ajuste conforme necessário */
+    margin-top: 5px;
   }
   
   /* Ajuste de espaçamento entre seções específicas */
   #sobre {
-    padding-bottom: 40px; /* diminui o espaço inferior da seção Sobre */
+    padding-bottom: 40px;
   }
   
   #calculadora {
-    padding-top: 40px;    /* diminui o espaço superior da seção Calculadora */
-    padding-bottom: 40px; /* diminui o espaço inferior da seção Calculadora */
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
   
   #contato {
-    padding-top: 40px;    /* diminui o espaço superior da seção Contato */
+    padding-top: 40px;
   }
   
   /* Calculadora */
@@ -205,13 +215,35 @@
   /* Responsividade */
   @media (max-width: 768px) {
     .header-container {
-      flex-direction: column;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    /* Exibe o botão do menu hamburguer */
+    .menu-toggle {
+      display: block;
+    }
+    
+    /* Esconde o menu inicialmente e o posiciona */
+    .nav {
+      display: none;
+      position: absolute;
+      top: 70px; /* Ajuste conforme a altura do header */
+      right: 0;
+      background: #1a1a1a;
+      width: 100%;
+      z-index: 10;
+    }
+    
+    .nav.active {
+      display: block;
     }
     
     .nav-list {
       flex-direction: column;
       gap: 10px;
-      margin-top: 15px;
+      padding: 10px 0;
     }
     
     .hero h2 {
