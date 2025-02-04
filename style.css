@@ -1,264 +1,303 @@
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Fonte e configurações base */
-  body {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-  }
-  
-  /* Container geral */
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 0;
-  }
-  
-  /* Header */
-  .header .container {
-    width: 90%;
-  }
-  
-  .header {
-    background: #1a1a1a;
-    color: #fff;
-    padding: 20px 0;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte e configurações base */
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Container geral */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Header */
+.header .container {
+  width: 90%;
+}
+
+.header {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 40px;
+  height: auto;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-list li a:hover {
+  color: #9f392d;
+}
+
+/* Botão do menu hamburguer */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Seção Hero */
+.hero {
+  background: url('hero-bg.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26,26,26,0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Botão */
+.btn {
+  background: #9f392d;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #ce826f;
+}
+
+/* Seções */
+.section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+/* Sobre */
+.sobre p {
+  margin-bottom: 10px;
+}
+
+.sobre-texto {
+  margin-top: 5px;
+}
+
+/* Ajuste de espaçamento entre seções específicas */
+#sobre {
+  padding-bottom: 40px;
+}
+
+#calculadora {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#documentos {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#contato {
+  padding-top: 40px;
+}
+
+/* Calculadora */
+.calculadora-form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Resultado */
+.resultado {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* Seção Documentos */
+.documentos .documentos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.documento-card {
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100px; /* Ajuste esse valor conforme necessário para um tamanho consistente */
+}
+
+.documento-card .btn {
+  margin-top: auto;
+}
+
+
+.documento-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.documento-card p {
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Contato */
+.contato a {
+  color: #9f392d;
+  text-decoration: none;
+}
+
+.contato a:hover {
+  text-decoration: underline;
+}
+
+/* Rodapé */
+.footer {
+  background: #1a1a1a;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
   .header-container {
-    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    position: relative;
   }
   
-  .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  /* Exibe o botão do menu hamburguer */
+  .menu-toggle {
+    display: block;
   }
   
-  .logo-img {
-    width: 40px;
-    height: auto;
+  /* Estilo para o menu mobile com animação */
+  .nav {
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 70px; /* Ajuste conforme a altura do header */
+    right: 0;
+    background: #1a1a1a;
+    width: 100%;
+    padding: 0 20px;  /* Espaçamento lateral */
+    border-radius: 5px;  /* Bordas levemente arredondadas */
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+    z-index: 10;
   }
   
-  .logo {
-    font-size: 1.8rem;
-    font-weight: 600;
+  .nav.active {
+    max-height: 300px; /* Valor suficiente para conter o menu – ajuste se necessário */
+    opacity: 1;
   }
   
   .nav-list {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-list li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .nav-list li a:hover {
-    color: #9f392d;
-  }
-  
-  /* Botão do menu hamburguer */
-  .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  /* Seção Hero */
-  .hero {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
-    color: #fff;
-    text-align: center;
-    padding: 100px 20px;
-    position: relative;
-  }
-  
-  .hero::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(26,26,26,0.5);
-    z-index: 1;
-  }
-  
-  .hero-content {
-    position: relative;
-    z-index: 2;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
   }
   
   .hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2rem;
   }
   
   .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 1rem;
   }
-  
-  /* Botão */
-  .btn {
-    background: #9f392d;
-    color: #fff;
-    padding: 10px 25px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background 0.3s;
-  }
-  
-  .btn:hover {
-    background: #ce826f;
-  }
-  
-  /* Seções */
-  .section {
-    padding: 60px 0;
-    text-align: center;
-  }
-  
-  /* Sobre */
-  .sobre p {
-    margin-bottom: 10px;
-  }
-  
-  .sobre-texto {
-    margin-top: 5px;
-  }
-  
-  /* Ajuste de espaçamento entre seções específicas */
-  #sobre {
-    padding-bottom: 40px;
-  }
-  
-  #calculadora {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-  
-  #contato {
-    padding-top: 40px;
-  }
-  
-  /* Calculadora */
-  .calculadora-form {
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: left;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .form-group label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 5px;
-  }
-  
-  .form-group input,
-  .form-group select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  /* Resultado */
-  .resultado {
-    margin-top: 20px;
-    font-size: 1.4rem;
-    font-weight: 600;
-  }
-  
-  /* Contato */
-  .contato a {
-    color: #9f392d;
-    text-decoration: none;
-  }
-  
-  .contato a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Rodapé */
-  .footer {
-    background: #1a1a1a;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.9rem;
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .header-container {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-    }
-    
-    /* Exibe o botão do menu hamburguer */
-    .menu-toggle {
-      display: block;
-    }
-    
-    /* Estilo para o menu mobile com animação */
-    .nav {
-      /* Removendo display:none e usando max-height para animar */
-      max-height: 0;
-      overflow: hidden;
-      position: absolute;
-      top: 70px; /* Ajuste conforme a altura do header */
-      right: 0;
-      background: #1a1a1a;
-      width: 100%;
-      padding: 0 20px;  /* Espaçamento lateral para que os itens não fiquem colados na borda */
-      border-radius: 5px;  /* Bordas levemente arredondadas */
-      transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
-      opacity: 0;
-      z-index: 10;
-    }
-    
-    .nav.active {
-      max-height: 300px; /* Valor suficiente para conter o menu – ajuste se necessário */
-      opacity: 1;
-    }
-    
-    .nav-list {
-      flex-direction: column;
-      gap: 10px;
-      padding: 10px 0;
-    }
-    
-    .hero h2 {
-      font-size: 2rem;
-    }
-    
-    .hero p {
-      font-size: 1rem;
-    }
-  }
-  
+}
