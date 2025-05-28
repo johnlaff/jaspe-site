@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jaspe Arquitetura</title>
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Jaspe Arquitetura">
-    <meta property="og:description" content="Transformando Espaços, Inspirando Vidas. Conheça nosso trabalho e projetos únicos.">
-    <meta property="og:image" content="https://jaspe.vercel.app/assets/img/logo_preview.png">
-    <meta property="og:url" content="https://jaspe.vercel.app/">
-    <meta property="og:type" content="website">
-    
-    <!-- Twitter Cards Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Jaspe Arquitetura">
-    <meta name="twitter:description" content="Transformando Espaços, Inspirando Vidas. Conheça nosso trabalho e projetos únicos.">
-    <meta name="twitter:image" content="https://jaspe.vercel.app/assets/img/logo_preview.png">
-    
-    <!-- Outros links (Google Fonts, Favicon, CSS, etc.) -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jaspe Arquitetura</title>
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Jaspe Arquitetura">
+  <meta property="og:description" content="Transformando Espaços, Inspirando Vidas. Conheça nosso trabalho e projetos únicos.">
+  <meta property="og:image" content="https://jaspe.vercel.app/assets/img/logo_preview.png">
+  <meta property="og:url" content="https://jaspe.vercel.app/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Cards Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jaspe Arquitetura">
+  <meta name="twitter:description" content="Transformando Espaços, Inspirando Vidas. Conheça nosso trabalho e projetos únicos.">
+  <meta name="twitter:image" content="https://jaspe.vercel.app/assets/img/logo_preview.png">
+
+  <!-- Outros links (Google Fonts, Favicon, CSS, etc.) -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32">
+  <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
   <!-- Cabeçalho -->
   <header class="header">
@@ -65,28 +66,7 @@
       <p class="sobre-texto">
         Inspirado nas propriedades do Jaspe, uma pedra reconhecida por sua capacidade de promover equilíbrio, foco e proteção, o escritório busca integrar esses valores em cada etapa do processo criativo. Com um olhar atento à estética, funcionalidade e sustentabilidade, nossos projetos são desenvolvidos para criar ambientes que alinhem harmonia e propósito, atendendo às necessidades específicas de cada cliente.
       </p>
-    </div>
-  </section>
-
-  <!-- Seção Calculadora -->
-  <section id="calculadora" class="section calculadora">
-    <div class="container">
-      <h2>Calculadora de Rampa</h2>
-      <form id="formCalculadora" class="calculadora-form">
-        <div class="form-group">
-          <label for="calculoTipo">Escolha o cálculo:</label>
-          <select id="calculoTipo">
-            <option value="inclinacao">Calcular Inclinação (altura e comprimento)</option>
-            <option value="comprimento">Calcular Comprimento (altura e inclinação)</option>
-            <option value="altura">Calcular Altura (comprimento e inclinação)</option>
-          </select>
-        </div>
-        <div id="inputs" class="form-group">
-          <!-- Inputs serão renderizados dinamicamente -->
-        </div>
-        <button type="submit" class="btn">Calcular</button>
-      </form>
-      <div id="resultado" class="resultado"></div>
+      <img src="assets/img/equipe/equipe-jaspe.jpg" alt="Equipe Jaspe Arquitetura" class="sobre-img">
     </div>
   </section>
 
@@ -115,42 +95,74 @@
           <p>Formato: PDF</p>
           <a href="assets/docs/interpretacao_criativa.pdf" download class="btn">Download</a>
         </div>
+        <div class="documento-card">
+          <h3>Edifício Vitalis - Estudo Preliminar</h3>
+          <p>Formato: PDF</p>
+          <a href="https://drive.google.com/uc?export=download&id=1-plY_Om0hsCVZ3-l5JyznCYbprQXl4Rr" class="btn" target="_blank" rel="noopener">Download</a>
+        </div>
+        <div class="documento-card">
+          <h3>Edifício Vitalis - Projeto Executivo</h3>
+          <p>Formato: PDF</p>
+          <a href="https://drive.google.com/uc?export=download&id=1wH8uK50D-BR54qM0SNeg3_-tAjxaew8A" class="btn" target="_blank" rel="noopener">Download</a>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- Seção Calculadora -->
+  <section id="calculadora" class="section calculadora">
+    <div class="container">
+      <h2>Calculadora de Rampa</h2>
+      <form id="formCalculadora" class="calculadora-form">
+        <div class="form-group">
+          <label for="calculoTipo">Escolha o cálculo:</label>
+          <select id="calculoTipo">
+            <option value="inclinacao">Calcular Inclinação (altura e comprimento)</option>
+            <option value="comprimento">Calcular Comprimento (altura e inclinação)</option>
+            <option value="altura">Calcular Altura (comprimento e inclinação)</option>
+          </select>
+        </div>
+        <div id="inputs" class="form-group">
+          <!-- Inputs serão renderizados dinamicamente -->
+        </div>
+        <button type="submit" class="btn">Calcular</button>
+      </form>
+      <div id="resultado" class="resultado"></div>
+    </div>
+  </section>
+
   <!-- Seção Equipe -->
-<section id="equipe" class="section equipe">
-  <div class="container">
-    <h2>Nossa Equipe</h2>
-    <div class="equipe-grid">
-      <div class="equipe-card">
-        <img src="assets/img/equipe/gio.jpg" alt="Arquiteta Giordanna" class="equipe-img">
-        <h3>Giordanna</h3>
-        <p class="cargo">Especialista em BIM</p>
-        <p class="descricao">Implementa e gerencia modelos inteligentes, otimizando processos e garantindo precisão na compatibilização de projetos.</p>
-      </div>
-      <div class="equipe-card">
-        <img src="assets/img/equipe/gabi.jpg" alt="Arquiteta Gabriela" class="equipe-img">
-        <h3>Gabriela</h3>
-        <p class="cargo">Gestora</p>
-        <p class="descricao">Coordena equipes e processos, definindo metas e prazos para assegurar eficiência, qualidade e colaboração em cada fase do projeto.</p>
-      </div>
-      <div class="equipe-card">
-        <img src="assets/img/equipe/kamylle.jpg" alt="Arquiteta Kamylle" class="equipe-img">
-        <h3>Kamylle</h3>
-        <p class="cargo">Projetista</p>
-        <p class="descricao">Desenvolve soluções criativas e funcionais, dando forma e propósito aos conceitos arquitetônicos.</p>
-      </div>
-      <div class="equipe-card">
-        <img src="assets/img/equipe/daniela.jpg" alt="Arquiteta Daniela" class="equipe-img">
-        <h3>Daniela</h3>
-        <p class="cargo">Desenhista</p>
-        <p class="descricao">Transforma ideias em representações visuais precisas, garantindo clareza e expressão em cada projeto.</p>
+  <section id="equipe" class="section equipe">
+    <div class="container">
+      <h2>Nossa Equipe</h2>
+      <div class="equipe-grid">
+        <div class="equipe-card">
+          <img src="assets/img/equipe/gio.jpg" alt="Arquiteta Giordanna" class="equipe-img">
+          <h3>Giordanna</h3>
+          <p class="cargo">Especialista em BIM</p>
+          <p class="descricao">Implementa e gerencia modelos inteligentes, otimizando processos e garantindo precisão na compatibilização de projetos.</p>
+        </div>
+        <div class="equipe-card">
+          <img src="assets/img/equipe/gabi.jpg" alt="Arquiteta Gabriela" class="equipe-img">
+          <h3>Gabriela</h3>
+          <p class="cargo">Gestora</p>
+          <p class="descricao">Coordena equipes e processos, definindo metas e prazos para assegurar eficiência, qualidade e colaboração em cada fase do projeto.</p>
+        </div>
+        <div class="equipe-card">
+          <img src="assets/img/equipe/kamylle.jpg" alt="Arquiteta Kamylle" class="equipe-img">
+          <h3>Kamylle</h3>
+          <p class="cargo">Projetista</p>
+          <p class="descricao">Desenvolve soluções criativas e funcionais, dando forma e propósito aos conceitos arquitetônicos.</p>
+        </div>
+        <div class="equipe-card">
+          <img src="assets/img/equipe/daniela.jpg" alt="Arquiteta Daniela" class="equipe-img">
+          <h3>Daniela</h3>
+          <p class="cargo">Desenhista</p>
+          <p class="descricao">Transforma ideias em representações visuais precisas, garantindo clareza e expressão em cada projeto.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- Seção Contato -->
@@ -159,7 +171,7 @@
       <h2>Contato</h2>
       <p>Entre em contato conosco: <a href="mailto:arquiteturajaspe@gmail.com">arquiteturajaspe@gmail.com</a></p>
       <p>
-        Siga-nos no Instagram: 
+        Siga-nos no Instagram:
         <a href="https://www.instagram.com/jaspe_arquitetura/" target="_blank">@jaspe_arquitetura</a>
       </p>
     </div>
@@ -174,4 +186,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
